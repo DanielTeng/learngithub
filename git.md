@@ -6,8 +6,9 @@
 
 ## 版本管理
 + git add
-+ git commit
++ git commit -m ""
 + git rm (git rm --cached <\file>)
++ git reset HEAD <\file>
 
 <br>
 
