@@ -41,3 +41,4 @@
 + git checkout -- test.txt
 
 ## 文件重命名
++ git mv test.txt test1.txt (move)
