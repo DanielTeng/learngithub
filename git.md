@@ -26,7 +26,7 @@
 
 <br>
 
-## config操作
+## 配置操作
 + git config (git config --global user.name "Your Name")
 + git config (git config --global user.email "Your Email")
 + git config --global --replace-all user.name "Daniel_Teng"
