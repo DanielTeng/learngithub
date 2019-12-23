@@ -8,6 +8,7 @@
 + git add
 + git add . (通配符)
 + git commit -m ""
++ git commit --amend -m "修改上次提交的备注"
 + git rm (git rm --cached <\file>)
 + git rm test.txt (完成2步，1，删除；2，文件放入暂存区;自动做了纳入暂存区)
 + git reset HEAD <\file>(从暂存区恢复到工作区,恢复2)
