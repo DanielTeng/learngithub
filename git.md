@@ -22,3 +22,12 @@
 ## 远程协作
 + git push
 + git pull
+
+<br>
+
+## 辅助操作
++ git config (git config --global user.name "Your Name")
++ git config (git config --global user.email "Your Email")
++ git config --global --replace-all user.name "Daniel_Teng"
++ git config --global --replace-all user.email "tengyong1971@gmail.com"
++ git config --list
