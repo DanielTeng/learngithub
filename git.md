@@ -33,3 +33,6 @@
 + git config --global --replace-all user.email "tengyong1971@gmail.com"
 + git config --list
 + system -> global -> local 系统 -> 用户 -> 项目
+
+## check out
++ git checkout -- test.txt
