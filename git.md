@@ -50,3 +50,8 @@
 
 ## 文件重命名
 + git mv test.txt test1.txt (move)
+
+## .gitignore
++ .gitignore是一个文件，本身受git管理
++ 进入.gitignore的文件名，不受git管理
+
