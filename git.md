@@ -41,6 +41,9 @@
 + git config --global --replace-all user.email "tengyong1971@gmail.com"
 + git config --list
 + system -> global -> local 系统 -> 用户 -> 项目
++ git help config
++ git config --help
++ man git-config (这需要linux系统)
 
 ## 撤销工作区操作
 + git checkout -- test.txt
