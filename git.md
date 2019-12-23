@@ -22,6 +22,7 @@
 + git log
 + git log -5 （只查最近5条提交信息）
 + git log --pretty=oneline
++ git log --pretty=format:"%h -%an, %ar :%s"
 + git dif
 + git status (当前git状态)
 
