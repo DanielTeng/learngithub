@@ -51,7 +51,10 @@
 ## 文件重命名
 + git mv test.txt test1.txt (move)
 
-## .gitignore
+## .gitignore 忽略
 + .gitignore是一个文件，本身受git管理
 + 进入.gitignore的文件名，不受git管理
 + build/加入.gitignore;忽略build目录下所有文件。
+
+## 分支
++ git branch 显示当前所有分支
