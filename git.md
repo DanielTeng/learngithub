@@ -8,7 +8,10 @@
 + git add
 + git commit -m ""
 + git rm (git rm --cached <\file>)
-+ git reset HEAD <\file>
++ git rm test.txt (完成2步，1，删除；2，文件放入暂存区;自动做了纳入暂存区)
++ git reset HEAD <\file>(从暂存区恢复到工作区,恢复2)
++ git checkout --test.txt (撤回删除，撤回1)
++ rm test.txt (仅仅完成1步，1，删除；还需要git add test.txt来放入暂存区)
 
 <br>
 
@@ -34,5 +37,7 @@
 + git config --list
 + system -> global -> local 系统 -> 用户 -> 项目
 
-## check out
+## 撤销工作区操作
 + git checkout -- test.txt
+
+## 文件重命名
