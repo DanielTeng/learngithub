@@ -20,6 +20,7 @@
 ## 查看信息
 + git help
 + git log
++ git log -5 （只查最近5条提交信息）
 + git dif
 + git status (当前git状态)
 
