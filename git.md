@@ -25,9 +25,10 @@
 
 <br>
 
-## 辅助操作
+## config操作
 + git config (git config --global user.name "Your Name")
 + git config (git config --global user.email "Your Email")
 + git config --global --replace-all user.name "Daniel_Teng"
 + git config --global --replace-all user.email "tengyong1971@gmail.com"
 + git config --list
++ system -> global -> local 系统 -> 用户 -> 项目
