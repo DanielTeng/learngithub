@@ -63,3 +63,5 @@
 + git branch -d new_branch 删除分支(假如并无新文件)
 + git branch -D new_branch 强制删除分支
 + git checkout -b new_branch2 创建并切换到新分支
++ git merge new_branch2 合并分支
++ git branch -v 本分支最近的变动
