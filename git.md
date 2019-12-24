@@ -60,5 +60,6 @@
 + git branch 显示当前所有分支
 + git branch new_branch 创建新分支
 + git checkout new_branch 切换到新分支
-+ git branch -d new_branch 删除分支
++ git branch -d new_branch 删除分支(假如并无新文件)
 + git branch -D new_branch 强制删除分支
++ git checkout -b new_branch2 创建并切换到新分支
