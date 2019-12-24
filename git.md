@@ -65,3 +65,9 @@
 + git checkout -b new_branch2 创建并切换到新分支
 + git merge new_branch2 合并分支
 + git branch -v 本分支最近的变动
+
+## 分支的本质和master的本质
++ HEAD是分支branch的pointer，指向master
++ master是提交commit的pointer，指向最新的提交
++ 新建的new_branch跟master一样，指向同一个最新的提交
++ 真是指针的妙用
