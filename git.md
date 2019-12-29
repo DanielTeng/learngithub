@@ -85,4 +85,5 @@
 
 ## checkout进阶
 
-+ git checkout -- filename 撤销对文件的变更
++ git checkout -- filename 撤销对工作区working file文件的变更,指尚未add到暂存区的变更
++ git reset HEAD filename 暂存区文件撤回到工作区状态
