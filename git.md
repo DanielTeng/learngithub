@@ -65,6 +65,7 @@
 + git branch -d new_branch 删除分支(假如并无新文件)
 + git branch -D new_branch 强制删除分支
 + git checkout -b new_branch2 创建并切换到新分支
++ git branch -m branch_old_name branch_new_name 修改分支的名字
 + git merge new_branch2 合并分支，是默认的fast forward模式
 + git branch -v 本分支最近的变动
 + git merge --no-ff new_branch 合并分支，不用ff模式，新建一个提交commit
@@ -87,3 +88,15 @@
 
 + git checkout -- filename 撤销对工作区working file文件的变更,指尚未add到暂存区的变更
 + git reset HEAD filename 暂存区文件撤回到工作区状态
++ git checkout commit_id (HEAD detached, 游离状态，to look around, 跟git reset --hard commit_id不同)
++ git commit -am "" 游离状态下的提交，是孤立的commit提交，不在任何分支branch上，无法追踪，如下
++ git branch new_branch_name commit_id 为如上的孤立commit创建一个新的分支，这跟merge无关,可追踪
+
+## 分支工作的stash（工作区现场保存）
+
++ git stash 保存工作区现场：工作的临时保存，建立WIP（working in process）索引，可以checkout了
++ git stash list 列举工作区现场，临时保存的列表
++ git stash pop 最常用，重回工作区现场，重回工作区工作状态(取回临时状态，恢复，并删除原WIP)
++ git stash apply 重回工作区现场，工作区工作状态(取回临时状态，恢复，但并不删除原WIP)
++ git stash drop stash@{n} 手动删除工作区现场
++ git stash apply stash@{n} 指定工作区现场版本，恢复
