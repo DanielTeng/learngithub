@@ -39,6 +39,7 @@
 + git config --global --replace-all user.email "tengyong1971@gmail.com"
 + git config --list
 + system -> global -> local 系统 -> 用户 -> 项目
++ git config --global color.ui auto
 + git help config
 + git config --help
 + man git-config (这需要linux系统)
@@ -100,3 +101,12 @@
 + git stash apply 重回工作区现场，工作区工作状态(取回临时状态，恢复，但并不删除原WIP)
 + git stash drop stash@{n} 手动删除工作区现场
 + git stash apply stash@{n} 指定工作区现场版本，恢复
+
+## 标签
+
++ 2种标签: 标签不属于分支。用于发布，里程碑。
++ 轻量级标签：lightweight；git tag v1.0.1
++ 带有附注的标签：annotated; git tag -a v1.0.2 -m "released version"
++ 删除标签：git tag -d tag_name
++ 查看标签：git tag
++ 查找标签：git tag -l "v1.0"
