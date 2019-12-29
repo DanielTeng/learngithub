@@ -29,7 +29,7 @@
 ## 远程协作
 
 + git push
-+ git pull
++ git pull == fetch + merge
 
 ## 配置操作
 
@@ -123,3 +123,11 @@
 + 2: 某一提交与工作区的差别。git diff commit_id, git diff HEAD（最近的提交）,版本库是源，工作区是目标。
 + 3: 某一提交与暂存区的差别。版本库是源，暂存区是目标。git diff --cached
 + 4: 比较两个提交之间的差别。git diff commit_id1 commit_id2 filename (第一个是源，第二个是目标)
+
+## 远程git，github
+
++ github 与 gitlab
++ github账号注册和登录
++ 在github新建repository，取名learngithub
++ git remote add origin https://github.com/DanielTeng/learngithub.git 添加远程库(origin = https://github.com/DanielTeng/learngithub.git)
++ git push -u origin master (-u,把本地master跟远程master关联)（The key is "argument-less git-pull".）… is the same as:git push origin master ; git branch --set-upstream master origin/master
