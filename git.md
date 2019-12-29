@@ -78,7 +78,7 @@
 
 ## git的版本回退
 
-+ git reset --hard HEAD^ 回退上一个版本
++ git reset --hard HEAD^ 回退上一个版本(windows的cmd控制台把^做为换行符，所以问more？)
 + git reset --hard HEAD~1 回退1个版本
 + git reset --hard commit_id 回退特定版本，可进
 + git reflog 操作记录，用于向前回退的查找commit_id
