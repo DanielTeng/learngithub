@@ -1,3 +1,4 @@
 hello world
 another line
 to test unstage
+to test stash1
