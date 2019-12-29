@@ -122,4 +122,4 @@
 + 1: 暂存区（索引区）跟工作区的文件差别。git diff, 暂存区是原始文件（源）-，工作区是目标文件+。
 + 2: 某一提交与工作区的差别。git diff commit_id, git diff HEAD（最近的提交）,版本库是源，工作区是目标。
 + 3: 某一提交与暂存区的差别。版本库是源，暂存区是目标。git diff --cached
-+ 4: 比较两个提交之间的差别。git diff fee9f9cf4b cdd577e352 app/build.gradle
++ 4: 比较两个提交之间的差别。git diff commit_id1 commit_id2 filename (第一个是源，第二个是目标)
