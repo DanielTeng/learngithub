@@ -82,3 +82,7 @@
 + git reset --hard HEAD~1 回退1个版本
 + git reset --hard commit_id 回退特定版本，可进
 + git reflog 操作记录，用于向前回退的查找commit_id
+
+## checkout进阶
+
++ git checkout -- filename 撤销对文件的变更
