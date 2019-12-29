@@ -110,3 +110,8 @@
 + 删除标签：git tag -d tag_name
 + 查看标签：git tag
 + 查找标签：git tag -l "v1.0"
+
+## git blame
+
++ git blame : 添加环境变量：LESSCHARSET=utf-8;解决git cmd中文乱码问题。
++ git blame filename: 每一行。最后的修改时间，修改人。
