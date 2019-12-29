@@ -43,7 +43,7 @@
 + git help config
 + git config --help
 + man git-config (这需要linux系统)
-+ git config --global credential.helper store
++ git config --global credential.helper store (git远程记住用户名和密码）
 
 ## 撤销工作区操作
 
