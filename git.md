@@ -133,3 +133,5 @@
 + git remote add origin https://github.com/DanielTeng/learngithub.git 添加远程库(origin = https://github.com/DanielTeng/learngithub.git)
 + git push -u origin master (-u,把本地master跟远程master关联)（The key is "argument-less git-pull".）… is the same as:git push origin master ; git branch --set-upstream master origin/master
 + git push 直接推送(在已经关联远程库以后)
++ git remote show (列出所有与本地本仓库对应关联的远程仓库的别名,代替http资源地址)
++ git remote show prigin (远程仓库的详细信息)
