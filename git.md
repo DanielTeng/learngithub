@@ -152,3 +152,11 @@
 + 总是可读，勾选可写
 + 可以部署多个公钥
 + 针对特定仓库
+
+## git远程协作
+
++ 当A落后于远程仓库，无法push，要先pull,这会有merge(假如有冲突，需要A进行人工merge解决冲突)。然后push。
++ 远程库只是交互交换中心。
++ 本地会有1个origin/master分支？是远程master分支的索引或引用吗？
++ git branch -a 查看远程分支的索引。(remotes/origin/master)这个remotes说明这个分支也在本地，指向remotes。
+
