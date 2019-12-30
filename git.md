@@ -2,6 +2,8 @@
 
 + git init
 + git clone
++ git --version 查询当前git版本
++ rm -rf .git 删除git本地仓库
 
 ## 版本管理
 
@@ -134,4 +136,19 @@
 + git push -u origin master (-u,把本地master跟远程master关联)（The key is "argument-less git-pull".）… is the same as:git push origin master ; git branch --set-upstream master origin/master
 + git push 直接推送(在已经关联远程库以后)
 + git remote show (列出所有与本地本仓库对应关联的远程仓库的别名,代替http资源地址)
-+ git remote show prigin (远程仓库的详细信息)
++ git remote show origin (远程仓库的详细信息)
+
+## gitflow 工作流程
+
++ master 主分支(非常稳定)
++ hotfix(n) 紧急修复 (临时)
++ release(n) 发布 (稳定)(略，跟test重复)
++ test(n) 测试（更新不是很频繁)
++ develop 开发 （频繁更新）
++ feature(n) 功能开发 (分工，日常)
+
+## 如何在仓库的settings 部署 keys（公钥）
+
++ 总是可读，勾选可写
++ 可以部署多个公钥
++ 针对特定仓库
