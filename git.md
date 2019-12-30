@@ -166,3 +166,4 @@
 + (git config --local user.name "luzhiqian") (git config --local user.email "tengyong1971@gmail.com") 设置
 + (git config user.name) (git config user.email) 查看
 + (在mygit2目录执行git branch -av,另外可以看到 remotes/origin/HEAD -> origin/master)??
++ git pull 是合并执行git fetch(取回到origin/master); git merge origin/master(与更新的origin/master做merge).
