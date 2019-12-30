@@ -38,7 +38,7 @@
 + git config (git config --global user.name "Your Name")
 + git config (git config --global user.email "Your Email")
 + git config --global --replace-all user.name "Daniel_Teng"
-+ git config --global --replace-all user.email "tengyong1971@gmail.com"
++ git config --global --replace-all user.email "419885411@qq.com"
 + git config --list
 + system -> global -> local 系统 -> 用户 -> 项目
 + git config --global color.ui auto
@@ -157,6 +157,12 @@
 
 + 当A落后于远程仓库，无法push，要先pull,这会有merge(假如有冲突，需要A进行人工merge解决冲突)。然后push。
 + 远程库只是交互交换中心。
-+ 本地会有1个origin/master分支？是远程master分支的索引或引用吗？
-+ git branch -a 查看远程分支的索引。(remotes/origin/master)这个remotes说明这个分支也在本地，指向remotes。
-
++ 本地会有1个origin/master分支。是远程master分支的索引或引用吗？(实现了比对远程的本地化)(无法修改，是只读的，git系统自动维护。)
++ git branch -a 能查看到远程分支的索引。(remotes/origin/master)这个remotes说明这个分支也在本地，指向remotes。
++ git branch -av 包括了分支的最近一次提交。能看出本地分支和关联远程分支的进度关系。
++ git clone: 把远程仓库获取到本地。另一用户，另一机器，另一文件夹。远程库名成为下级文件夹。
++ git clone https://github.com/DanielTeng/learngithub.git
++ git clone https://github.com/DanielTeng/learngithub.git mygit2 (这就不用远程库名learngithub做默认文件夹了，用mygit2)
++ (git config --local user.name "luzhiqian") (git config --local user.email "tengyong1971@gmail.com") 设置
++ (git config user.name) (git config user.email) 查看
++ (在mygit2目录执行git branch -av,另外可以看到 remotes/origin/HEAD -> origin/master)??
