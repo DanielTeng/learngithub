@@ -167,3 +167,9 @@
 + (git config user.name) (git config user.email) 查看
 + (在mygit2目录执行git branch -av,另外可以看到 remotes/origin/HEAD -> origin/master)??
 + git pull 是合并执行git fetch(取回到origin/master); git merge origin/master(与更新的origin/master做merge).
+
+## gitk, git gui 图形界面工具
+
++ gitk (tcl/tk)
++ git gui
++ github desktop
