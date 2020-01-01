@@ -175,3 +175,8 @@
 + gitk (tcl/tk)
 + git gui
 + github desktop
+
+## 分支改名
+
++ git branch -m original_branch_name new_branch_name (不在本分支)
++ git branch -m new_branch_name (在本分支)
