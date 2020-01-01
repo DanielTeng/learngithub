@@ -46,6 +46,8 @@
 + git config --help
 + man git-config (这需要linux系统)
 + git config --global credential.helper store (git远程记住用户名和密码）
++ git config --global alias.br branch （设置别名）
++ git config --global alias.ui !gitk (为外部命令设置别名)
 
 ## 撤销工作区操作
 
