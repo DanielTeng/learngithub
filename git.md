@@ -180,3 +180,20 @@
 
 + git branch -m original_branch_name new_branch_name (不在本分支)
 + git branch -m new_branch_name (在本分支)
++ 重命名远程分支，只能删了重建
+
+## 本地分支到远程分支的建立，本地分支从远程分支建立 refspec的概念
+
++ git push --set-upstream origin develop (推送并在远程建立关联新分支)
++ git push --set-upstream origin develop:develop2 (推送并在远程建立关联新分支,不同名，不要用)
++ git push origin HEAD:develop2 (不同名的分支的上推，不要用，这个HEAD是指当前本地分支)
++ git pull (先取回新分支，但本地无新分支)
++ git checkout -b develop origin/develop (基于远程分支建立本地新分支，这个远程分支是个ref)
++ git checkout --track origin/develop (新版本的写法)
+
+## 删除本地分支
+
++ git branch -d branch_name (删除本地分支)
++ git push 的完整写法：git push origin src:dest (本地分支的名字：远程分支的名字，2个名字可以是不同的)
++ git push origin  :dest (推空分支到远程，删除远程分支)
++ git push origin --delete remote_branch_name (新版版本删除远程分支，更好理解)
