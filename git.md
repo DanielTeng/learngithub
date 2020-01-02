@@ -20,12 +20,13 @@
 ## 查看信息
 
 + git help
-+ git log
++ git log 提交日志
++ git reflog 操作日志，也很有用，凡是修改HEAD指向的操作都被记录，据此跟踪commit的sha1值。
 + git log -5 （只查最近5条提交信息）
 + git log --pretty=oneline
 + git log --pretty=format:"%h -%an, %ar :%s"
 + git log --graph 图示git log
-+ git dif
++ git diff
 + git status (当前git状态)
 
 ## 远程协作
@@ -191,9 +192,25 @@
 + git checkout -b develop origin/develop (基于远程分支建立本地新分支，这个远程分支是个ref)
 + git checkout --track origin/develop (新版本的写法)
 
-## 删除本地分支
+## 删除本地分支 删除远程分支
 
 + git branch -d branch_name (删除本地分支)
 + git push 的完整写法：git push origin src:dest (本地分支的名字：远程分支的名字，2个名字可以是不同的)
++ git pull 的完整写法：git pull origin remote_src:local_dest
 + git push origin  :dest (推空分支到远程，删除远程分支)
 + git push origin --delete remote_branch_name (新版版本删除远程分支，更好理解)
+
+## 底层命令
+
++ symbolic-ref 底层命令，实现对HEAD文件的修改，HEAD，是指向指针的指针，commit实质的变化，会导致指针和指针的指针的变化。
++ git symbolic-ref (HEAD refs/heads/master) 底层命令并不会被reflog记录。
+
+## 标签的远程
+
++ git tag (列举，tag，静态，关联特定commit_id)
++ git tag show v1.0 (commit操作的文件变化都能显示)
++ git tag -l "?2*" 使用正则对标签做搜索
++ git push origin v1.0 推送标签到远程
++ git push origin v2.0 v3.0 一次推送2个标签
++ git push origin --tags 推送全部未被推送的标签
++ git tag, github对应的是release
