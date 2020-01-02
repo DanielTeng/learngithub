@@ -140,6 +140,10 @@
 + git push 直接推送(在已经关联远程库以后)
 + git remote show (列出所有与本地本仓库对应关联的远程仓库的别名,代替http资源地址)
 + git remote show origin (远程仓库的详细信息)
++ git remote add 命令会自动生成refspec, git会获取远端refs/heads下所有引用,写在本地refs/remotes/origin目录下.如下
++ fetch = +refs/heads/*:refs/remotes/origin/* (+ 是调取git fetch一定成功，merge不一定成功,允许fast forward)
++ git log origin/master 查看远端master分支的提交历史
++ 等价命令 git log remotes/origin/master; git log refs/remotes/origin/master,最完整)
 
 ## gitflow 工作流程
 
@@ -207,10 +211,16 @@
 
 ## 标签的远程
 
-+ git tag (列举，tag，静态，关联特定commit_id)
++ git tag (列举，tag，静态，关联特定commit_id,实现迅速查找特定commit)
 + git tag show v1.0 (commit操作的文件变化都能显示)
 + git tag -l "?2*" 使用正则对标签做搜索
 + git push origin v1.0 推送标签到远程
 + git push origin v2.0 v3.0 一次推送2个标签
 + git push origin --tags 推送全部未被推送的标签
 + git tag, github对应的是release
++ git push origin :refs/tags/v2.0 删除远程标签 (refspec)
++ git push origin --delete tag v2.0 删除远程标签
++ 标签推送的完整写法 git push origin refs/tags/v7.0:refs/tags/v7.0
++ 拉取特定标签 git fetch origin tag v7.0
++ 另一个人删除了远程develop分支，显示refs/remotes/origin/develop stale (use 'git memote prune' to remove)
++ git remote prune origin (剪掉过期的远程分支ref) (git remote show origin,信息干净)
