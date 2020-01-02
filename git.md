@@ -224,3 +224,7 @@
 + 拉取特定标签 git fetch origin tag v7.0
 + 另一个人删除了远程develop分支，显示refs/remotes/origin/develop stale (use 'git memote prune' to remove)
 + git remote prune origin (剪掉过期的远程分支ref) (git remote show origin,信息干净)
++ git checkout v1.0 (切换到标签上，commit游离状态)
+
+## git gc
+
