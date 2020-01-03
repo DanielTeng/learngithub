@@ -228,3 +228,39 @@
 
 ## git gc
 
++ git gc 暂不用，packed-refs
+
+## git裸库
+
++ 没有工作区， git init --bare
+
+## submodule
+
++ 项目依赖
++ parent项目，child项目
++ git remote add origin https://github.com/DanielTeng/git_parent.git
++ git remote add origin https://github.com/DanielTeng/git_child.git
++ git submodule add https://github.com/DanielTeng/git_child.git mymodule (mymodule是不存在的本地目录，会新建，原有的话会报错)
++ 会克隆submodule，需要加入暂存,提交和push。关联了2个库。
++ 当submodule更新，cd mymodule; git pull.拉取更新。
++ 更新全部submodule；在项目根目录，git submodule foreach git pull
++ 当新人加入git_parent; git clone https://github.com/DanielTeng/git_parent.git git_parent2
++ submodule关系会自动克隆下来，但内容不会。需要手动做：
++ 1，git submodule init;注册submodule；
++ 2，git submodule foreach git pull;更新。(git submodule update --recursive)
++ 递归的克隆，把子模块也克隆下来。git clone https://github.com/DanielTeng/git_parent.git git_parent3 --recursive
++ 移除submodule:1,从暂存区删除，2，从工作区删除，3，删除.modules目录。
++ 1,逆初始化模块，其中{MOD_NAME}为模块目录，执行后可发现模块目录被清空 git submodule deinit {MOD_NAME}
++ 2,删除.gitmodules中记录的模块信息（--cached选项清除.git/modules中的缓存）git rm --cached {MOD_NAME}
++ 3,提交更改到代码库，可观察到'.gitmodules'内容发生变更 git commit -am "Remove a submodule."
++ submodule适用于多语言开发，以及依赖的源代码频繁更新的状况。
+
+## git subtree
+
++ git subtree 列举常用subtree命令
++ git remote add subtree_origin https://github.com/DanielTeng/git_child.git （普通的增加远程库命令）
++ git subtree add --prefix=subtree subtree_origin master (prefix=subtree是指定本地目录)(--squash,选项，是否合并子库的提交历史)
++ --squash是git merge的可选参数
++ git subtree pull --prefix=subtree subtree_origin master (subtree的pull)
++ git push, 修改subtree以后的推送，只影响主项目，跟subtree指向的子项目无关。(我猜这时对subtree做pull会导致merge并可能冲突)
++ git subtree push --prefix=subtree subtree_origin master (这是对subtree指向的子项目远程库做push，权限问题)
