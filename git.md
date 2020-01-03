@@ -267,3 +267,14 @@
 + git log subtree_origin/master; 这会只看到子库的提交历史
 + --squash,要么从开始就一直用，要么就一直都不用。不然会乱。
 + parent下拉，修改，上推，child下拉，修改，上推，都没问题。这时parent下拉，报告冲突，是为什么？下回分解。
+
+## git cherry-pick
+
++ branch的嫁接技术
++ git cherry-pick commit_id; 把其他分支的提交应用到本分支。
++ 因为提交都记录了代码。从分歧点，依序嫁接过来，不会有任何问题。跳岛嫁接，会产生冲突，需手工解决冲突。
++ 建议依次嫁接。
+
+## 问：master如何撤回到上一个版本？
+
++ git reset --hard commit_id
