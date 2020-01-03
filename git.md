@@ -278,3 +278,13 @@
 ## 问：master如何撤回到上一个版本？
 
 + git reset --hard commit_id
+
+## git rebase
+
++ git rebase, 跟merge 不同
++ git checkout feature2， git rebase feature1; feature2 就该改换成以 feature1为base的直线继续分支，两个分支也是合并了。
++ rebase把feature2的更新应用到了feature1分支上。
++ git rebase跟merge一样也可能有冲突。解决冲突后，需要git add 添加，然后执行 git rebase --continue.
++ git rebase --abort, 那就取消rebase了，分支会恢复到执行rebase之前的状态。
++ git rebase 会修改 feature2的提交历史，改为以feature1为base。
++ 最佳实践：不要对master做rebase；只在本地分支做rebase，尚未推送到远程，不对远程分支做rebase。
