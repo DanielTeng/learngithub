@@ -264,3 +264,6 @@
 + git subtree pull --prefix=subtree subtree_origin master (subtree的pull)
 + git push, 修改subtree以后的推送，只影响主项目，跟subtree指向的子项目无关。(我猜这时对subtree做pull会导致merge并可能冲突)
 + git subtree push --prefix=subtree subtree_origin master (这是对subtree指向的子项目远程库做push，权限问题)
++ git log subtree_origin/master; 这会只看到子库的提交历史
++ --squash,要么从开始就一直用，要么就一直都不用。不然会乱。
++ parent下拉，修改，上推，child下拉，修改，上推，都没问题。这时parent下拉，报告冲突，是为什么？下回分解。
